@@ -1,0 +1,8 @@
+include ':clonecoding1'
+include ':assignment6'
+include ':assignment5'
+include ':assignment4'
+include ':assignment3'
+include ':assignment2'
+include ':assignment1'
+rootProject.name = "PracticeAndroid"
