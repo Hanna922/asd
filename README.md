@@ -9,6 +9,8 @@
 내용이 괜찮다면 본인의 브렌치에 머지를 하여 결과물을 기록하게 됩니다
 master 에는 머지하지 않습니다
 
+밑에 과제들은 참고된 링크를 잘 봐주세요
+
 과제 1
 
     문제 1.
@@ -20,31 +22,33 @@ master 에는 머지하지 않습니다
     
     
 과제 2
-    
+
+[상태관리](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-2/assets/photo1.png)
+
+[예제](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-2/assets/photo2.png)
+
     계산기 만들기
-    상태관리
-    
-    [](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-2/assets/photo1.png)
     
     복합연산은 하지 않고 연산자를 누를때마다 계산한 값이 반영되도록 한다
     버튼은 숫자 0~9 까지 +, -, *, / 연산자 버튼, +/- 전환 버튼, % 버튼, = 버튼 총 19개의 버튼으로 구성한다
-    과제 2 - 1
-    
-    [](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-2/assets/photo2.png)
     
     위의 사진은 아이폰 모양으로 만들어본 예시입니다
     혹은 이것보다 기발하고 좀 어려운 디자인이면 칭찬 해드립니다 ㅎㅎ 
     
 과제 3
 
+[설명](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-3/assets/photo1.png)
+
+
     과제3
     asset에 10개의 이미지를 저장하고 랜덤의 순서로 RecyclerView를 이용해서 세로 방향으로 이미지 리스트를 띄워라.
     리사이클러뷰의 아이템은 아래 사진처럼 이미지와 제목으로 구성되어 있다.
     이미지를 길게 누르면 파일의 이름이 AlertDialog로 출력되며, 화면 스크롤이 끝까지 닿은 경우 또 다시 랜덤의 순서로 이미지가 재배열된다.
     
-    [](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-3/assets/photo1.png)
-    
 과제 4
+
+[바텀 기본](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/hangr_assignment-4/assets/photo1.png)
+
 
     bottom navigation + 프래그먼트 4개로 SharedPreference 와 같이 사용하여 구현하기
     첫번째 탭 : 사용자 이름 입력
@@ -52,20 +56,20 @@ master 에는 머지하지 않습니다
     세번째 탭 : 학교, 학번
     네번째 탭 : 1,2,3 번 탭에서 입력한 정보 한번에 보여주기
     탭을 이동해도 사용자 정보가 유지되도록 만들기 방법은 자유
-    
-    [](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/hangr_assignment-4/assets/photo1.png)
 
 과제 5
+
+[앱 권한 요청](https://developer.android.com/training/permissions/requesting?hl=ko)
+
+[갤러리에서 이미지 불러와 이미지뷰에 보여주기](https://webnautes.tistory.com/1302)
+
+[RxPermissions](https://github.com/tbruyelle/RxPermissions)
 
     화면에는 이미지뷰를 만든다.
     이미지뷰를 클릭하면 Intent를 이용해 사용자 휴대폰의 갤러리에서 이미지를 선택하고, 선택한 이미지를 이미지뷰에 띄워준다.
     안드로이드 SDK 26 (6.0 Marshmallow) 이후부터는 사용자의 휴대폰에 있는 파일을 불러오기 위해서는 권한을 허락 받아야 한다.
     
-    참고자료
-    앱 권한 요청 https://developer.android.com/training/permissions/requesting?hl=ko
-    안드로이드 예제 - 갤러리에서 이미지 불러와 이미지뷰에 보여주기 https://webnautes.tistory.com/1302
-    
-    추가과제(optional) - 권한 허가 부분을 RxPermissions 를 이용하여 리팩토링하시오. https://github.com/tbruyelle/RxPermissions
+    추가과제(optional) - 권한 허가 부분을 RxPermissions 를 이용하여 리팩토링하시오. 
     
 과제 6
 
