@@ -23,9 +23,9 @@ master 에는 머지하지 않습니다
     
 과제 2
 
-[상태관리](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-2/assets/photo1.png)
+![상태관리](photo1.png)
 
-[예제](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-2/assets/photo2.png)
+![예제](photo2.png)
 
     계산기 만들기
     
@@ -37,7 +37,7 @@ master 에는 머지하지 않습니다
     
 과제 3
 
-[설명](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/assignment-3/assets/photo1.png)
+![설명](photo3.png)
 
 
     과제3
@@ -47,7 +47,7 @@ master 에는 머지하지 않습니다
     
 과제 4
 
-[바텀 기본](https://gitlab.com/yourssu_incubating/incubating-android/-/raw/hangr_assignment-4/assets/photo1.png)
+![바텀 기본](photo4.png)
 
 
     bottom navigation + 프래그먼트 4개로 SharedPreference 와 같이 사용하여 구현하기
