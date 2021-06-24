@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
         result.text = click
     }
+
     var op="+"
     var firstNumber=""
 
