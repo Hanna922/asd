@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
+import kotlin.collections.ArrayList
 
 //context 쉽게 말하자면...? : 어플리케이션이나 객체의 현재 상태
 class MainRvAdapter(val context: Context, val umuList: ArrayList<UmuData>) :
@@ -40,6 +42,7 @@ class MainRvAdapter(val context: Context, val umuList: ArrayList<UmuData>) :
 
     //onCreateViewHolder에서 만든 view와 실제 입력되는 각각의 데이터를 연결
     override fun onBindViewHolder(holder: Holder, position: Int) {
+        umuList.shuffle() //섞어주는 과정, 즉 랜덤 배치
         holder.bind(umuList[position], context)
     }
 }
