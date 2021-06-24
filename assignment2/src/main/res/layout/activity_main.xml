@@ -33,19 +33,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.782" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/point"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/point"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/zero"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/zero" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/zero"
@@ -54,13 +55,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/zero"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/one"
@@ -69,12 +70,12 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/one"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/zero"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/two"
@@ -83,12 +84,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/two"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/zero"
-        app:layout_constraintStart_toEndOf="@+id/one"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/one" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/three"
@@ -97,12 +98,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/three"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/zero"
-        app:layout_constraintStart_toEndOf="@+id/two"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/two" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/four"
@@ -111,12 +112,12 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/four"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/one"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/five"
@@ -125,12 +126,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/five"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/two"
-        app:layout_constraintStart_toEndOf="@+id/four"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/four" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/six"
@@ -139,12 +140,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/six"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/three"
-        app:layout_constraintStart_toEndOf="@+id/five"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/five" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/seven"
@@ -153,12 +154,12 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/seven"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/four"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/eight"
@@ -167,12 +168,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/eight"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/five"
-        app:layout_constraintStart_toEndOf="@+id/seven"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/seven" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nine"
@@ -181,28 +182,28 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button"
+        android:onClick="numberEvent"
         android:text="@string/nine"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/six"
-        app:layout_constraintStart_toEndOf="@+id/eight"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/eight" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/equals"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/circle_button2"
+        android:onClick="equalsEvent"
         android:text="@string/equals"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/point"
-        android:onClick="equalsEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/point" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/plus"
@@ -211,14 +212,14 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button2"
+        android:onClick="operatorEvent"
         android:text="@string/plus"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/zero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/three"
-        android:onClick="operatorEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/three" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/minus"
@@ -227,14 +228,14 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button2"
+        android:onClick="operatorEvent"
         android:text="@string/minus"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/six"
-        android:onClick="operatorEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/six" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/multiplication"
@@ -244,14 +245,14 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button2"
+        android:onClick="operatorEvent"
         android:text="@string/multiplication"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/nine"
-        android:onClick="operatorEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/nine" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/division"
@@ -261,13 +262,13 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button2"
+        android:onClick="operatorEvent"
         android:text="@string/division"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/multiplication"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/percent"
-        android:onClick="operatorEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/percent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cancel"
@@ -276,12 +277,12 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button3"
+        android:onClick="cancelEvent"
         android:text="@string/cancel"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/seven"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="cancelEvent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/plus_minus"
@@ -290,12 +291,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button3"
+        android:onClick="numberEvent"
         android:text="@string/plus_minus"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/eight"
-        app:layout_constraintStart_toEndOf="@+id/cancel"
-        android:onClick="numberEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/cancel" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/percent"
@@ -304,11 +305,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circle_button3"
+        android:onClick="percentEvent"
         android:text="@string/percent"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/nine"
-        app:layout_constraintStart_toEndOf="@+id/plus_minus"
-        android:onClick="percentEvent"/>
+        app:layout_constraintStart_toEndOf="@+id/plus_minus" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,13 +8,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    var oper=true
+    var dot=false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
-    var oper=true
-    var dot=false
     fun numberEvent(view: View)
     {
         if(oper) {result.text = ""} //setText("") 텍스트 변경, 코틀린에선 text

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">assignment3</string>
+    <string name="jeju_umu1">Jeju_umu1</string>
+    <string name="jeju_umu2">Jeju_umu2</string>
+    <string name="jeju_umu3">Jeju_umu3</string>
+    <string name="todo">TODO</string>
+    <string name="jeju_umu4">Jeju_umu4</string>
+    <string name="jeju_umu5">Jeju_umu5</string>
+    <string name="jeju_umu6">Jeju_umu6</string>
+    <string name="jeju_umu7">Jeju_umu7</string>
+    <string name="jeju_umu8">Jeju_umu8</string>
+    <string name="jeju_umu9">Jeju_umu9</string>
+    <string name="jeju_umu10">Jeju_umu10</string>
 </resources>
