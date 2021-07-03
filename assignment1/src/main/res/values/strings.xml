@@ -7,4 +7,6 @@
     <string name="checkBox2">CheckBox2</string>
     <string name="checkbox3">CheckBox3</string>
     <string name="checkbox4">CheckBox4</string>
+    <string name="record">record</string>
+    <string name="rewind">rewind</string>
 </resources>

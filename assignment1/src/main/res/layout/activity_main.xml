@@ -98,4 +98,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/record"
+        android:layout_width="406dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white_gray"
+        android:text="@string/record"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiply" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rewind"
+        android:layout_width="406dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white_gray"
+        android:text="@string/rewind"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
