@@ -3,9 +3,8 @@ package com.yourssu.assignment3
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.card.*
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +36,17 @@ class MainActivity : AppCompatActivity() {
         //var layout = LinearLayoutManager(this)
         //recyclerview_assign3.layoutManager = layout
         recyclerview_assign3.adapter = MainRvAdapter(this, allUmuList)
+
+        recyclerview_assign3.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+
+                // 스크롤이 끝에 도달했는지 확인
+                if (!recyclerview_assign3.canScrollVertically(1)){
+                    //아이템을 어떻게 다시 불러와야 할지 모르겠음
+                }
+            }
+        })
     }
 }
-    // 이미지를 길게 누를 시 -> 롱클릭 이벤트 (setOnLongClickListener)
+// 이미지를 길게 누를 시 -> 롱클릭 이벤트 (setOnLongClickListener)

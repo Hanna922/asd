@@ -1,5 +1,6 @@
 package com.yourssu.assignment3
 
+import android.app.AlertDialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -7,15 +8,17 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
 import kotlin.collections.ArrayList
 
 //context 쉽게 말하자면...? : 어플리케이션이나 객체의 현재 상태
-class MainRvAdapter(val context: Context, val umuList: ArrayList<UmuData>) :
-    RecyclerView.Adapter<MainRvAdapter.Holder>() {
+class MainRvAdapter(val context: MainActivity, val umuList: ArrayList<UmuData>) :
+        RecyclerView.Adapter<MainRvAdapter.Holder>() {
 
     //inner class를 사용함으로써 참조를 가능하게 함
-    inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnLongClickListener {
+        init {
+            itemView.setOnLongClickListener(this)
+        }
         val umuImageView = itemView.findViewById<ImageView>(R.id.umuImage)
         val umuTextView = itemView.findViewById<TextView>(R.id.umuText)
 
@@ -26,6 +29,12 @@ class MainRvAdapter(val context: Context, val umuList: ArrayList<UmuData>) :
             val resourceId = context.resources.getIdentifier(umuData.photo.toString(), "drawable", context.packageName)
             umuImageView.setImageResource(resourceId)
             umuTextView.text = umuData.title
+        }
+
+        override fun onLongClick(view: View): Boolean {
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage(umuTextView.text).show()
+            return true
         }
     }
 
@@ -43,8 +52,10 @@ class MainRvAdapter(val context: Context, val umuList: ArrayList<UmuData>) :
     //onCreateViewHolder에서 만든 view와 실제 입력되는 각각의 데이터를 연결
     override fun onBindViewHolder(holder: Holder, position: Int) {
         umuList.shuffle() //섞어주는 과정, 즉 랜덤 배치
+        //처음에는 바르게 실행되었지만 어느순간부터 스크롤시 랜덤 아이템 변경 오류가 발생함
+        //해결방법은 리사이클러뷰 재사용을 막는 법...? -> 그럼 리사이클러뷰 의미가 없지 않은가
         holder.bind(umuList[position], context)
     }
 }
 
-//onCreateViewHolder에서 공간 설정 -> Holder -> onBindViewHolder에서 umulist 담음
+//getItemCount -> onCreateViewHolder에서 공간 설정 -> Holder -> onBindViewHolder에서 umulist 담음
