@@ -2,6 +2,7 @@ package com.yourssu.assignment3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,28 +26,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerview_assign3.adapter = MainRvAdapter(this, allUmuList)
-        //val rvAdapter = MainRvAdapter(this, allUmuList)
-        //recyclerview_assign3.adapter = rvAdapter
+        allUmuList.shuffle()
+
+        val rvAdapter = MainRvAdapter(this, allUmuList)
+        recyclerview_assign3.adapter = rvAdapter
 
         //LinearLayoutManager, GridLayoutManager, StaggeredGridLayoutManager
         //LayoutManager의 역할 = RecyclerView의 각 item들을 배치, item이 보이지 않을 경우 재사용 여부 결정
         //item 재사용 시 LayoutManager는 Adapter에게 view의 요소를 다른 데이터로 대체할지 물어봄
-        recyclerview_assign3.layoutManager = LinearLayoutManager(this)
-        //var layout = LinearLayoutManager(this)
-        //recyclerview_assign3.layoutManager = layout
-        recyclerview_assign3.adapter = MainRvAdapter(this, allUmuList)
+        val layout = LinearLayoutManager(this)
+        recyclerview_assign3.layoutManager = layout
 
         recyclerview_assign3.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
 
-                // 스크롤이 끝에 도달했는지 확인
                 if (!recyclerview_assign3.canScrollVertically(1)){
-                    //아이템을 어떻게 다시 불러와야 할지 모르겠음
+                    Log.d(this::class.simpleName, "new")
+                    rvAdapter.umuList.shuffle()
+                    rvAdapter.notifyDataSetChanged()
                 }
             }
         })
     }
 }
-// 이미지를 길게 누를 시 -> 롱클릭 이벤트 (setOnLongClickListener)

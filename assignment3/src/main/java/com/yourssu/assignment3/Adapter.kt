@@ -2,6 +2,7 @@ package com.yourssu.assignment3
 
 import android.app.AlertDialog
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,7 @@ class MainRvAdapter(val context: MainActivity, val umuList: ArrayList<UmuData>) 
         //getResources().getIdentifier(파일명, 디렉토리명, 패키지명)
         //-> 문자열로 해당 Resource 또는 레이아웃에 포함된 View의 Id 값을 가져옴
         fun bind (umuData: UmuData, context: Context) {
+            Log.d(this::class.simpleName, "bind")
             val resourceId = context.resources.getIdentifier(umuData.photo.toString(), "drawable", context.packageName)
             umuImageView.setImageResource(resourceId)
             umuTextView.text = umuData.title
@@ -41,20 +43,20 @@ class MainRvAdapter(val context: MainActivity, val umuList: ArrayList<UmuData>) 
     //화면을 최초 로딩하여 만들어진 View가 없는 경우 xml 파일을 inflate하여 ViewHolder를 생성
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.card, parent, false)
+        Log.d(this::class.simpleName, "onCreateViewHolder ${Holder(view)}")
         return Holder(view)
     }
 
     //RecyclerView로 만들어지는 item의 총 개수를 반환
     override fun getItemCount(): Int {
+        Log.d(this::class.simpleName, "getItemCount ${umuList.size}")
         return umuList.size
     }
 
     //onCreateViewHolder에서 만든 view와 실제 입력되는 각각의 데이터를 연결
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        umuList.shuffle() //섞어주는 과정, 즉 랜덤 배치
-        //처음에는 바르게 실행되었지만 어느순간부터 스크롤시 랜덤 아이템 변경 오류가 발생함
-        //해결방법은 리사이클러뷰 재사용을 막는 법...? -> 그럼 리사이클러뷰 의미가 없지 않은가
         holder.bind(umuList[position], context)
+        Log.d(this::class.simpleName, "onBindViewHolder $position")
     }
 }
 
