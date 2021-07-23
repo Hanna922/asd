@@ -6,11 +6,29 @@
     tools:context=".AllFragment">
 
     <TextView
+        android:id="@+id/nameTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/allinformation"
+        android:text="nameTextView"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/birthdayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="birthdayTextView"
         android:textColor="#000000"
         android:textSize="18sp"
-        android:gravity="center"/>
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/schoolTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="schoolTextView"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_marginTop="60dp"/>
 
 </FrameLayout>

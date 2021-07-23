@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_name.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,10 +17,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigationBar()
+        navigationBar() {
+            nameButton.setOnClickListener {
+                App.prefs.nameKey = nameEditText.text.toString()
+            }
+        }
     }
 
-    private fun navigationBar() {
+    private fun navigationBar(function: () -> Unit) {
         bottom_navi.run {
             setOnNavigationItemSelectedListener {
                 when(it.itemId) {
