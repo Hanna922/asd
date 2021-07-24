@@ -28,8 +28,10 @@ class MainRvAdapter(val context: MainActivity, val umuList: ArrayList<UmuData>) 
         //-> 문자열로 해당 Resource 또는 레이아웃에 포함된 View의 Id 값을 가져옴
         fun bind (umuData: UmuData, context: Context) {
             Log.d(this::class.simpleName, "bind")
-            val resourceId = context.resources.getIdentifier(umuData.photo.toString(), "drawable", context.packageName)
-            umuImageView.setImageResource(resourceId)
+
+            //val resourceId = context.resources.getIdentifier(umuData.photo.toString(), "drawable", context.packageName)
+            //umuImageView.setImageResource(resourceId)
+            umuImageView.setImageResource(umuData.umuPhotoId)
             umuTextView.text = umuData.title
         }
 
