@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">assignment1</string>
+    <string name="radioButton">전체 해제</string>
+    <string name="radioButton2">전체 선택</string>
+    <string name="radioButton3">일부 선택</string>
+    <string name="checkBox1">CheckBox1</string>
+    <string name="checkBox2">CheckBox2</string>
+    <string name="checkbox3">CheckBox3</string>
+    <string name="checkbox4">CheckBox4</string>
+    <string name="record">record</string>
+    <string name="rewind">rewind</string>
 </resources>

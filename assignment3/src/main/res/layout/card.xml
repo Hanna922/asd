@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_assign3"
+    android:layout_width="match_parent"
+    android:layout_height="430dp"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp">
+
+<!--    Q. ImageView에서 contentDescription이 하는 역할과 권하는 이유
+        A. ImageView, ImageButton, CheckBox 또는 시각적으로 정보를 전달하는 다른 보기를 사용할 때
+        android:contentDescription 속성을 사용하여 해당 보기의 콘텐츠 라벨을 제공, 접근성과 관련되어 보임
+        -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/umuImage"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/todo"
+            tools:src="@drawable/image1">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/umuText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/jeju_umu1"
+            android:textColor="#000000"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
