@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">assignment4</string>
+    <string name="inputbirthday">생일 입력</string>
+    <string name="inputname">이름 입력</string>
+    <string name="inputschool">학교, 학번 입력</string>
+    <string name="allinformation">전체 정보</string>
+    <string name="save">save</string>
 </resources>

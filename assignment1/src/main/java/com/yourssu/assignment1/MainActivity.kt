@@ -30,6 +30,30 @@ class MainActivity : AppCompatActivity() {
             checkBox3.isChecked = true
             checkBox4.isChecked = true
         }
+
+        //android kotlin data save(?) : https://minwook-shin.github.io/android-kotlin-sharedpreferences/
+        val preference = this.getPreferences(0)
+        val editor = preference.edit()
+
+        record.setOnClickListener {
+            editor.putBoolean("radioButton", radioGroup.radioButton.isChecked).apply()
+            editor.putBoolean("radioButton2", radioGroup.radioButton2.isChecked).apply()
+            editor.putBoolean("radioButton3", radioGroup.radioButton3.isChecked).apply()
+            editor.putBoolean("checkBox1", checkBox1.isChecked).apply()
+            editor.putBoolean("checkBox2", checkBox2.isChecked).apply()
+            editor.putBoolean("checkBox3", checkBox3.isChecked).apply()
+            editor.putBoolean("checkBox4", checkBox4.isChecked).apply()
+        }
+
+        rewind.setOnClickListener {
+            radioGroup.radioButton.isChecked = preference.getBoolean("radioButton", radioGroup.radioButton.isChecked)
+            radioGroup.radioButton2.isChecked = preference.getBoolean("radioButton2", radioGroup.radioButton2.isChecked)
+            radioGroup.radioButton3.isChecked = preference.getBoolean("radioButton3", radioGroup.radioButton3.isChecked)
+            checkBox1.isChecked = preference.getBoolean("checkBox1", checkBox1.isChecked)
+            checkBox2.isChecked = preference.getBoolean("checkBox2", checkBox2.isChecked)
+            checkBox3.isChecked = preference.getBoolean("checkBox3", checkBox3.isChecked)
+            checkBox4.isChecked = preference.getBoolean("checkBox4", checkBox4.isChecked)
+        }
     }
 
     inner class CheckboxListener: CompoundButton.OnCheckedChangeListener{

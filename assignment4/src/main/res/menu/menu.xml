@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/name"
+        android:enabled="true"
+        android:icon="@drawable/nameemotion"
+        android:title="name" />
+
+    <item
+        android:id="@+id/birthday"
+        android:enabled="true"
+        android:icon="@drawable/birthdayemotion"
+        android:title="birthday"/>
+
+    <item
+        android:id="@+id/school"
+        android:enabled="true"
+        android:icon="@drawable/schoolemotion"
+        android:title="school"/>
+
+    <item
+        android:id="@+id/all"
+        android:enabled="true"
+        android:icon="@drawable/allemotion"
+        android:title="all"/>
+
+</menu>
