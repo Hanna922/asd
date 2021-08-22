@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="user"
+            type="com.yourssu.restful_api1.CentersData" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_restful"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(user.id)}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.address}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/centerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.centerName}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/centerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.centerType}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/createdAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.createdAt}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/facilityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.facilityName}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.lat}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.lng}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/org"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.org}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.phoneNumber}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.sido}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sigungu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.sigungu}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/updateAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.updatedAt}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/zipCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.zipCode}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</layout>
