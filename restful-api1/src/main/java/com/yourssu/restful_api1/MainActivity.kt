@@ -2,28 +2,28 @@ package com.yourssu.restful_api1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.yourssu.restful_api1.databinding.ActivityMainBinding
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val viewModel: MainViewModel by viewModels()
     private val centerData = ArrayList<CentersData>()
     private val rvAdapter = MainRvAdapter(centersList = centerData)
-    private var page = 1
-    private val perPage = 30
-    private var disposable: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.viewModel = viewModel
         binding.recyclerviewRestful.adapter = rvAdapter
-        getData(RetrofitAPI.createRetrofitApi())
+        viewModel.itemList.observe(this, Observer {
+            rvAdapter.centersList = it as ArrayList<CentersData>
+            rvAdapter.notifyDataSetChanged()
+        })
 
         binding.recyclerviewRestful.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -31,33 +31,10 @@ class MainActivity : AppCompatActivity() {
                 if (!binding.recyclerviewRestful.canScrollVertically(1)){
 
                     if (newState == 0) {
-                        page++
-                        getData(RetrofitAPI.createRetrofitApi())
-                        rvAdapter.notifyItemRangeInserted((page - 1) * 30, 30)
+                        viewModel.increaseData()
                     }
                 }
             }
         })
-    }
-
-    private fun getData(retrofitAPI: RetrofitAPI) {
-        disposable = retrofitAPI.getCenters(page, perPage, RetrofitAPI.serviceKey)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeOn(Schedulers.io())
-            .subscribe({
-                centerData.addAll(it.data)
-                rvAdapter.centersList = centerData
-                rvAdapter.notifyDataSetChanged()
-                Log.d(this::class.simpleName, "onNext")
-            }, {
-                Log.d(this::class.simpleName, "onError")
-            }, {
-                Log.d(this::class.simpleName, "onComplete")
-            })
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable?.let { disposable!!.dispose() }
     }
 }

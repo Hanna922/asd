@@ -6,6 +6,9 @@
         <variable
             name="user"
             type="com.yourssu.restful_api1.CentersData" />
+        <variable
+            name="viewModel"
+            type="com.yourssu.restful_api1.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
